@@ -1,0 +1,273 @@
+#search-heading {
+    font-family: Arial, sans-serif; /* Change the font to your desired font */
+    font-size: 20px; /* Adjust font size as needed */
+    margin-top: 30px;
+}
+
+.img-fill-container {
+    width: 100%;
+    height: auto;
+}
+
+.img-fill-container-2 {
+    width: auto;
+    height: 100%;
+}
+
+
+.location-icon {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.location-icon-container {
+    display: inline-block; /* Display the container as inline block */
+    vertical-align: middle; /* Align vertically to middle */
+}
+
+.location-heading-container {
+    color: #444;
+    display: inline-block; /* Display the container as inline block */
+    vertical-align: middle; /* Align vertically to middle */
+}
+
+
+.location-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 70px;
+    margin-bottom: 10px;
+    text-align: center; /* Center text horizontally */
+    background-color: #E8F1F7;
+}
+
+.location-content a {
+    color: #D24C57; /* Set hyperlink color */
+    text-decoration: underline; /* Remove underline */
+}
+
+.location-content a:hover {
+    color: #2D2D34; /* Set hyperlink color */
+    text-decoration: underline; /* Remove underline */
+}
+
+
+
+.movie-content-margin {
+    margin-bottom: 20px;
+} */
+
+
+.bold-label {
+    font-weight: 500; /* Adjust the value to make it less prominent */
+}
+
+.btn-custom-color {
+    background-color: #D24C57; /* Specify your custom color here */
+    color: white; /* Text color */
+    border-color: #D24C57; /* Border color */
+
+}
+
+.btn-custom-color:hover {
+    background-color: white; /* Specify your custom hover color here */
+    color: #444;
+    border-color: #444; /* Border hover color */
+}
+
+.discard-custom-color {
+    background-color: #777;
+    color: white;
+    border-color: #777;
+
+}
+
+.discard-custom-color:hover {
+    background-color: white;
+    color: #444;
+    border-color: #444;
+
+}
+
+.text-danger {
+    color: red;
+}
+
+
+.success-message {
+    background-color: #E8F1F7; /* You can change this color as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #D24C57; /* You can adjust border color if needed */
+    border-radius: 5px;
+}
+
+.success-message h2 {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.movie-container {
+    background-color: #E8F1F7; /* Default background color is white */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the box shadow */
+}
+
+.movie-container:hover {
+    background-color: white; /* Change background color to light pink when hovered */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow when hovering */
+}
+
+.card-body {
+    color: #444; /* Set text color to dark gray*/
+}
+
+
+.movie-title {
+    color:#2D2D34;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.movie-year{
+    color: #888;
+    text-decoration: underline;
+}
+
+.movie-year:hover{
+    color: #D24C57;
+    text-decoration: underline;
+}
+
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2D2D34; /* Dark gray color */
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin-top value as needed */
+}
+
+.homepage-info {
+    margin-bottom: 10px;
+}
+
+.home-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #2D2D34; /* Dark gray color */
+    text-align: center;
+    margin-top: 100px; /* Adjust the margin-top value as needed */
+    margin-bottom: 100px;
+}
+
+.home-subtitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2D2D34; /* Dark gray color */
+    text-align: center;
+    margin-top: 25px; /* Adjust the margin-top value as needed */
+    margin-bottom: 50px;
+}
+
+.homepage-top {
+    margin-bottom: 75px;
+}
+/* Define classes for link */
+.link-clickable {
+    font-weight: bold;
+    color: #D24C57; /* Default color */
+    text-decoration: underline; /* Remove underline */
+}
+
+.link-clickable:hover {
+    color: #444; /* Color on hover */
+}
+
+.black-link {
+    color: #444; /* Set font color to black for director links */
+    text-decoration: underline;
+}
+
+.black-link:hover {
+    color: #D24C57; /* Change font color to B97375 when hovered */
+}
+
+.highlight {
+    background-color: yellow;
+    color:#2D2D34;
+    font-weight: bolder;
+}
+
+.custom-navbar-bg {
+    background-color: #E8F1F7 !important; /* Override Bootstrap default */
+}
+
+.movie-top {
+    background-color: #E8F1F7;
+}
+
+.query-bold {
+    font-weight: bold;
+    display: inline-block;
+    white-space: pre;
+
+}
+
+.bold {
+    font-weight: bold;
+}
+.query-results {
+    color:#2D2D34;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.nav-link.btn {
+    padding: 0.375rem 0.75rem; /* Example padding values to match the button */
+    margin: 0; /* Reset margin to match button */
+}
+
+.light-gray {
+    color: #777;/* Light grey color */
+}
+
+.light-gray a {
+    color: #777; /* Light grey color */
+}
+
+.light-grey::placeholder {
+    color: #777;
+}
+
+
+.dark-gray {
+    color: #444;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.search-title-cstm {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.search-img-row {
+    margin-bottom: 15px;
+}
+
+
+.colored-hr {
+    background-color: #ddd;
+}
+
+.fake-black{
+    color:#2D2D34;
+}

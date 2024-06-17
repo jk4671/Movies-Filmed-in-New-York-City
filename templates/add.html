@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+<script>
+    let data = {{ data | tojson }};
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center title">Add Content</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="success-message-container"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="add_content_form">
+                <div class="form-group">
+                    <label for="title" class="bold-label dark-gray">Title:</label>
+                    <input type="text" class="form-control light-grey" id="title" name="title" placeholder="E.g. Spider-Man">
+                </div>
+                <div class="form-group">
+                    <label for="year" class="bold-label dark-gray">Year:</label>
+                    <input type="text" class="form-control light-grey" id="year" name="year" placeholder="E.g. 2002">
+                </div>
+                <div class="form-group">
+                    <label for="image" class="bold-label dark-gray">Image URL:</label>
+                    <input type="text" class="form-control light-grey" id="image" name="image" placeholder="E.g. https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UX1000_.jpg">
+                </div>
+                <div class="form-group">
+                    <label for="locations" class="bold-label dark-gray">Locations:</label>
+                    <textarea class="form-control light-grey" id="locations" name="locations" rows="3" placeholder="E.g. Times Square, Columbia University, Queensboro Bridge (Enter locations separated by commas)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="summary" class="bold-label dark-gray">Summary:</label>
+                    <textarea class="form-control light-grey" id="summary" name="summary" rows="3" placeholder="Summary"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="directors" class="bold-label dark-gray">Directors:</label>
+                    <input type="text" class="form-control light-grey" id="directors" name="directors" placeholder="E.g. Sam Raimi (Enter directors separated by commas)">
+                </div>
+                <div class="form-group">
+                    <label for="stars" class="bold-label dark-gray">Casts:</label>
+                    <input type="text" class="form-control light-grey" id="stars" name="stars" placeholder="E.g. Tobey Maguire, Willem Dafoe, Kirsten Dunst (Enter casts separated by commas)">
+                </div>
+                <div class="form-group">
+                    <label for="running_time_min" class="bold-label dark-gray">Running Time (Minutes):</label>
+                    <input type="text" class="form-control light-grey" id="running_time_min" name="running_time_min" placeholder="E.g. 121">
+                </div>
+                <div class="form-group">
+                    <label for="countries" class="bold-label dark-gray">Countries:</label>
+                    <input type="text" class="form-control light-grey" id="countries" name="countries" placeholder="E.g. United States (Enter countries separated by commas)">
+                </div>
+                <div class="form-group">
+                    <label for="budget" class="bold-label dark-gray">Budget ($):</label>
+                    <input type="text" class="form-control light-grey" id="budget" name="budget" placeholder="E.g. 139,000,000">
+                </div>
+                <button type="submit" class="btn btn-custom-color submit-button" id="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

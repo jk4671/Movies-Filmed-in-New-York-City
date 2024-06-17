@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+<script>
+    let popular_movies = {{ popular_movies | tojson }};
+</script>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="query-bold home-title">Movies Filmed in New York City</h1>
+        </div>
+    </div>
+
+    <div class="row homepage-top">
+        <div class="col-md-6">
+            <div class="row homepage-info">
+                <div class="col-md-3 dark-gray bold">
+                    About
+                </div>
+                <div class="col-md-9 light-gray">
+                    Are you a film fanatic who is visiting New York City?
+                    The website is a database containing New York City-based movies so that you could visit all the sites where the movies took place once you arrive in New York City.
+                </div>
+            </div>
+            <div class="row homepage-info">
+                <div class="col-md-3 dark-gray bold">
+                    Search
+                </div>
+                <div class="col-md-9 light-gray">
+                    You can use the search bar located in the navigation bar to look up movies based on their titles, film locations, directors, and actors.
+                </div>
+            </div>
+        
+            <div class="row homepage-info">
+                <div class="col-md-3 dark-gray bold">
+                    Contribute
+                </div>
+                <div class="col-md-9 light-gray">
+                    Add new New York City-based movies using the "Add" button located in the navigation bar. Edit the content of existing movies using the "Edit" button located on each movie page.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <img class="img-fill-container" src="https://clipart-library.com/images/Lid5epEeT.jpg" alt="New York City Skyline">
+        </div>
+
+    </div>
+
+    <hr class="colored-hr">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center home-subtitle">Most popular NYC-based Films</h2>
+        </div>
+    </div>
+    <div class="row" id="popularMoviesContainer">
+        <!-- Movie cards will be dynamically added here -->
+    </div>
+</div>
+
+{% endblock %}

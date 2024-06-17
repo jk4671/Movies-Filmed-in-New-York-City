@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="movie-title">{{ movie.title }} <span><a class="movie-year light-gray" href="/search?query={{ movie.year }}">({{ movie.year }})</a></span></h2>
+        </div>        
+    </div>
+    
+    <div class="row movie-content-margin">
+        <div class="col-md-4">
+            <img src="{{ movie.image }}" alt="{{ movie.title + ' poster' }}" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="location-icon-container">
+                        <img src="https://www.freeiconspng.com/uploads/address-location-marker-pin-place-point-pointer-icon--icon--0.png" alt="Location Icon" class="img-fluid location-icon">
+                    </div>
+                    <div class="location-heading-container">
+                        <h4 class="dark-gray">Locations</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for location in movie.locations %}
+                <div class="col-md-4">
+                    <div class="location-box">
+                        <div class="location-content">
+                            <a href="/search?query={{ location  | urlencode }}">{{ location }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+    
+    <hr class="colored-hr">
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Summary
+        </div>
+        <div class="col-md-10 dark-gray">
+            {{ movie.summary }}
+        </div>
+    </div>
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Directors
+        </div>
+        <div class="col-md-10">
+            {% for director in movie.directors %}
+                <a href="/search?query={{ director | urlencode }}" class="black-link dark-gray">{{ director }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Casts
+        </div>
+        <div class="col-md-10">
+            {% for star in movie.stars %}
+                <a href="/search?query={{ star | urlencode }}" class="black-link dark-gray">{{ star }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Running Time
+        </div>
+        <div class="col-md-10 dark-gray">
+            {{ movie.running_time_min }} minutes
+        </div>
+    </div>
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Countries
+        </div>
+        <div class="col-md-10 dark-gray">
+            {{ movie.countries | join(", ") }}
+        </div>
+    </div>
+
+    <div class="row movie-content-margin">
+        <div class="col-md-2 light-gray">
+            Budget
+        </div>
+        <div class="col-md-10 dark-gray">
+            ${{ movie.budget }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <a href="/edit/{{ movie.id }}" class="btn btn-outline-secondary btn-custom-color">Edit</a>
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock %}

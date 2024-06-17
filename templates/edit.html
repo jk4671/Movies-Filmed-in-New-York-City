@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+<script>
+    let movieId = "{{ movie.id }}"; // Assign movieId to a global variable
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center title">Edit Content</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="edit_entry_container">
+                <div class="form-group">
+                    <label for="title" class="bold-label light-gray">Title:</label>
+                    <input type="text" class="form-control dark-gray" id="title" name="title" placeholder="Title" value="{{ movie.title }}">
+                </div>
+                <div class="form-group">
+                    <label for="year" class="bold-label light-gray">Year:</label>
+                    <input type="text" class="form-control dark-gray" id="year" name="year" placeholder="Year" value="{{ movie.year }}">
+                </div>
+                <div class="form-group">
+                    <label for="image" class="bold-label light-gray">Image URL:</label>
+                    <input type="text" class="form-control dark-gray" id="image" name="image" placeholder="Image URL" value="{{ movie.image }}">
+                </div>
+                <div class="form-group">
+                    <label for="locations" class="bold-label light-gray">Locations:</label>
+                    <textarea class="form-control dark-gray" id="locations" name="locations" placeholder="Enter locations separated by commas">{{ movie.locations | join(', ') }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="summary" class="bold-label light-gray">Summary:</label>
+                    <textarea class="form-control dark-gray" id="summary" name="summary" placeholder="Summary">{{ movie.summary }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="directors" class="bold-label light-gray">Directors:</label>
+                    <input type="text" class="form-control dark-gray" id="directors" name="directors" placeholder="Enter directors separated by commas" value="{{ movie.directors | join(', ') }}">
+                </div>
+                <div class="form-group">
+                    <label for="stars" class="bold-label light-gray">Casts:</label>
+                    <input type="text" class="form-control dark-gray" id="stars" name="stars" placeholder="Enter stars separated by commas" value="{{ movie.stars | join(', ') }}">
+                </div>
+                <div class="form-group">
+                    <label for="running_time_min" class="bold-label light-gray">Running Time (Minutes):</label>
+                    <input type="text" class="form-control dark-gray" id="running_time_min" name="running_time_min" placeholder="Running Time (min)" value="{{ movie.running_time_min }}">
+                </div>
+                <div class="form-group">
+                    <label for="countries" class="bold-label light-gray">Countries:</label>
+                    <input type="text" class="form-control dark-gray" id="countries" name="countries" placeholder="Enter countries separated by commas" value="{{ movie.countries | join(', ') }}">
+                </div>
+                <div class="form-group">
+                    <label for="budget" class="bold-label light-gray">Budget ($):</label>
+                    <input type="text" class="form-control dark-gray" id="budget" name="budget" placeholder="Budget" value="{{ movie.budget }}">
+                </div>
+
+                <input type="hidden" id="id" name="id" value="{{ movie.id }}">
+                <button type="submit" class="btn btn-primary btn-custom-color edit-submit-button" id="edit-submit-button">Submit</button>
+                <button type="button" class="btn btn-secondary discard-custom-color discard-changes-button" id="discard-changes-button">Discard Changes</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
